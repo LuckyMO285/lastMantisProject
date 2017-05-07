@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class FactoryCheckThatTheIssueIsClosed {
 
-    @FindBy(xpath = "//*[@id=\"sidebar\"]/ul/li[1]/a/span")
+    @FindBy(xpath = "//*[@id=\"sidebar\"]/ul/li[1]")
     WebElement myView;
 
     public void clickOnMyViewButton(){

@@ -17,62 +17,63 @@ public class FactoryChangeIssue {
     })
     List<WebElement> checkSummary;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[5]/td[1]")
+    @FindBy(xpath = "//td[@class='bug-reporter']")
     WebElement reporter;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[6]/td[1]")
+    @FindBy(xpath = "//td[@class='bug-assigned-to']")
     WebElement assignedTo;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[7]/td[3]")
+    @FindBy(xpath = "//td[@class='bug-reproducibility']")
     WebElement reproducibility;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[7]/td[2]")
+    @FindBy(xpath = "//td[@class='bug-severity']")
     WebElement severity;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[9]/td[1]")
+    @FindBy(xpath = "//td[@class='bug-platform']")
     WebElement platform;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[9]/td[2]")
+    @FindBy(xpath = "//td[@class='bug-os']")
     WebElement os;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[9]/td[3]")
+    @FindBy(xpath = "//td[@class='bug-os-version']")
     WebElement osVersion;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[8]/td[1]")
+    @FindBy(xpath = "//td[@class='bug-status']")
     WebElement status;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[12]/td")
+    @FindBy(xpath = "//td[@class='bug-summary']")
     WebElement summary;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[13]/td")
+    @FindBy(xpath = "//td[@class='bug-description']")
     WebElement description;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[14]/td")
+    @FindBy(xpath = "//td[@class='bug-steps-to-reproduce']")
     WebElement stepsToReproduce;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[15]/td")
+    @FindBy(xpath = "//td[@class='bug-additional-information']")
     WebElement additionalInformation;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tbody/tr[8]/td[2]")
+    @FindBy(xpath = "//td[@class='bug-resolution']")
     WebElement resolution;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tfoot/tr/td/div/div[3]/form/select/option[.='resolved']")
+    @FindBy(xpath = "//select[@name='new_status'][1]/option[.='resolved']")
     WebElement statusResolved;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tfoot/tr/td/div/div[3]/form/select/option[.='closed']")
+    @FindBy(xpath = "//select[@name='new_status'][1]/option[.='closed']")
     WebElement statusClosed;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tfoot/tr/td/div/div[3]/form/input[1]")
+    @FindBy(xpath = "//input[@type='submit' and @value='Change Status To:']")
     WebElement changeStatusbotton;
 
-    @FindBy(xpath = "//*[@id=\"bug-change-status-form\"]/fieldset/div/div[2]/div[2]/input")
+    @FindBy(xpath = "//input[@type='submit' and @value='Resolve Issue']")
     WebElement resolveIssue;
 
-    @FindBy(xpath = "//*[@id=\"bug-change-status-form\"]/fieldset/div/div[2]/div[2]/input")
+    @FindBy(xpath = "//input[@type='submit' and @value='Close Issue']")
     WebElement closeIssue;
 
-    @FindBy(xpath = "//*[@id=\"recent_mod\"]/div[1]/div[2]/div/a")
+    @FindBy(xpath = "//*[@id=\"recent_mod\"]/div[1]/div[2]")
     WebElement viewIssues;
+
 
     public void clickOnTheIssue(String summary) throws Exception {
         checkSummary.stream()

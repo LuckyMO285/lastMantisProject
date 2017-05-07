@@ -41,10 +41,10 @@ public class WriteAnIssue {
     @FindBy(id = "description")
     WebElement description;
 
-    @FindBy(xpath = "//*[@id=\"steps_to_reproduce\"]")
+    @FindBy(id = "steps_to_reproduce")
     WebElement stepsToReproduce;
 
-    @FindBy(xpath = "//*[@id=\"additional_info\"]")
+    @FindBy(id = "additional_info")
     WebElement additionalInfo;
 
     @FindBy(xpath = "//input[@type='submit']")
