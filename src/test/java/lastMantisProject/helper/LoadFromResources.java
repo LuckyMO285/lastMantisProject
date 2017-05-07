@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.net.URL;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * Created by luck on 16.04.17.
@@ -20,14 +21,23 @@ public class LoadFromResources {
     public static final String DATA_ISSUES_JSON = "issue.json";
     private static Map<String, Users> users;
     private static Map<String, Issues> issues;
+    private static Random random = new Random();
 
     static {
         try {
             loadUsers();
             loadIssues();
+            addNumbersToFields();
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    private static void addNumbersToFields(){
+        issues.get("Issue").setSummary(issues.get("Issue").getSummary() + random.nextInt(1000));
+        issues.get("Issue").setDescription(issues.get("Issue").getDescription() + random.nextInt(1000));
+        issues.get("Issue").setStepsToReproduce(issues.get("Issue").getStepsToReproduce() + random.nextInt(1000));
+        issues.get("Issue").setAdditionalInfo(issues.get("Issue").getAdditionalInfo() + random.nextInt(1000));
     }
 
     @SneakyThrows

@@ -1,6 +1,7 @@
 package com.spbstu.pageObjectsFactory.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
@@ -9,6 +10,7 @@ import lombok.Setter;
  */
 
 @Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Issues {
@@ -72,6 +74,22 @@ public class Issues {
 
     public String getAdditionalInfo() {
         return additionalInfo;
+    }
+
+    public void setSummary(String str){
+        summary = str;
+    }
+
+    public void setDescription(String str){
+        description = str;
+    }
+
+    public void setStepsToReproduce(String str){
+        stepsToReproduce = str;
+    }
+
+    public void setAdditionalInfo(String str){
+        additionalInfo = str;
     }
 
 }
