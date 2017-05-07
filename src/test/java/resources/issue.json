@@ -1,0 +1,16 @@
+{
+  "Issue": {
+    "category":        "General",
+    "reproducibility": "always",
+    "influence":       "block",
+    "priority":        "urgent",
+    "platform":        "${domain}",
+    "OS":              "${os}",
+    "OSVersion":       "${version}",
+    "order":           "dev1",
+    "summary":         "theme",
+    "description":     "description",
+    "stepsToReproduce":  "reproduce steps",
+    "additionalInfo":  "additional information"
+  }
+}
