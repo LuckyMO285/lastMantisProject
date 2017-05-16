@@ -1,6 +1,4 @@
-package lastMantisProject;
-
-/**
+package lastMantisProject; /**
  * Created by luck on 23.04.17.
  */
 

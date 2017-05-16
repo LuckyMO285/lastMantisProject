@@ -20,6 +20,15 @@ public class FactoryTestIsFieldFillCurrently {
     })
     List<WebElement> checkSummary;
 
+    @FindBy(xpath = "//td[@class='column-status']")
+    WebElement status;
+
+    @FindBy(xpath = "//td[@class='column-category']")
+    WebElement category;
+
+    @FindBy(xpath = "//td[@class='column-severity']")
+    WebElement severity;
+
     public void clickOnViewIssues(){
         this.ViewIssues.click();
     }

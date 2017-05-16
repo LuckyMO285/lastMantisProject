@@ -27,8 +27,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-
                 <configuration>
+                    <includes>
+                        /lastMantisProject/Runner.java
+                    </includes>
                     <systemPropertyVariables>
                         <webdriver.chrome.driver>/home/luck/Documents/selenium/chromedriver</webdriver.chrome.driver>
                     </systemPropertyVariables>
