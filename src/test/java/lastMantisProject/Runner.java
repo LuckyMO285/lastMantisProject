@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        format = {"json:target/reports/mainReport.json"},
         features = {"src/test/java/resources/features"},
         glue = {"lastMantisProject.stepdefs"}
 )
