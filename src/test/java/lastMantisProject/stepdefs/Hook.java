@@ -23,6 +23,7 @@ public class Hook {
         /*ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
         driver = new ChromeDriver(options);*/
+
         System.setProperty("webdriver.chrome.driver", "/home/luck/Documents/selenium/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -45,7 +46,8 @@ public class Hook {
         MantisSite.deleteIssue.clickOnDelete();
         MantisSite.deleteIssue.clickOnDeleteIssues();
         Assert.assertFalse(MantisSite.testAfterDeleting.isContains("theme"));
-        driver.close();
+        //driver.close();
+        driver.quit();
     }
 
 }
