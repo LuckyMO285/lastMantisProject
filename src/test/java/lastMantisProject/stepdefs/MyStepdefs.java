@@ -44,7 +44,7 @@ public class MyStepdefs {
 
     @Then("^Check that the IssueList contains \"([^\"]*)\" with \"([^\"]*)\" by \"([^\"]*)\"$")
     public void checkThatTheIssueListContainsWithBy(String issue, String status, String user) throws Throwable {
-        MantisSite.testIsFieldFillCurrently.isContains(LoadFromResources.getIssue(issue).getSummary(), LoadFromResources.getIssue(issue).getCategory(), status, user, LoadFromResources.getIssue(issue).getSeverity());
+        MantisSite.testIsFieldFillCurrently.isContains(LoadFromResources.getIssue(issue).getSummary(), LoadFromResources.getIssue(issue).getCategory(), status, LoadFromResources.getUser(user).getLogin(), LoadFromResources.getIssue(issue).getSeverity());
     }
 
     @Given("^Open \"([^\"]*)\"$")

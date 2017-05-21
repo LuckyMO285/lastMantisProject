@@ -21,13 +21,13 @@ public class FactoryTestIsFieldFillCurrently {
     List<WebElement> checkSummary;
 
     @FindBy(xpath = "//td[@class='column-status']")
-    WebElement status;
+    WebElement Status;
 
     @FindBy(xpath = "//td[@class='column-category']")
-    WebElement category;
+    WebElement Category;
 
     @FindBy(xpath = "//td[@class='column-severity']")
-    WebElement severity;
+    WebElement Severity;
 
     public void clickOnViewIssues(){
         this.ViewIssues.click();
@@ -35,7 +35,7 @@ public class FactoryTestIsFieldFillCurrently {
 
     public boolean isContains(String summary, String category, String status, String username, String severity) throws Exception {
 
-       return checkSummary.stream()
+        return checkSummary.stream()
                 .filter(row -> row.findElement(By.xpath("//td[@class='column-summary']")).getText().equals(summary))
                 .findFirst()
                 .orElseThrow(Exception::new)
