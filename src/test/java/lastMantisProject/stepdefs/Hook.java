@@ -20,14 +20,14 @@ public class Hook {
 
     @Before
     public void before(Scenario scenario){
-        ChromeOptions options = new ChromeOptions();
+        /*ChromeOptions options = new ChromeOptions();
         //options.addArguments("start-maximized");
         options.addArguments("--disable-impl-side-painting");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);*/
 
-        /*System.setProperty("webdriver.chrome.driver", "/home/luck/Documents/selenium/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/home/luck/Documents/selenium/chromedriver");
         driver = new ChromeDriver();
-        driver.manage().window().maximize();*/
+        driver.manage().window().maximize();
         driver.navigate().to("http://www.google.com");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         MantisSite.init(driver);
